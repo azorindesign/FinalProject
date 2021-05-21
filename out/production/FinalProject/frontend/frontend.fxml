@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="768.0" style="-fx-background-color: linear-gradient(from 100px 0px to 100px 500px, #530b0e, #074a5e);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+   <children>
+      <AnchorPane layoutX="292.0" layoutY="303.0" prefHeight="302.0" prefWidth="485.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="238.0" layoutY="37.0" prefHeight="17.0" prefWidth="199.0" style="-fx-background-color: #530b0e;" text="ADD A SONG TO A LIST" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="85.0" layoutY="74.0" prefHeight="17.0" prefWidth="84.0" text="List name" textFill="#510000" />
+            <TextField fx:id="txtList" layoutX="56.0" layoutY="98.0" prefHeight="25.0" prefWidth="144.0" />
+            <Button fx:id="btnGoList" layoutX="99.0" layoutY="149.0" mnemonicParsing="false" onAction="#addList" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #530b0e;" text="GO" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="295.0" layoutY="135.0" prefHeight="17.0" prefWidth="84.0" text="Song to Add" textFill="#510000" />
+            <TextField fx:id="txtSong" layoutX="284.0" layoutY="163.0" prefHeight="25.0" prefWidth="107.0" />
+            <Label alignment="CENTER" layoutX="292.0" layoutY="68.0" prefHeight="17.0" prefWidth="84.0" text="List name" textFill="#510000" />
+            <TextField fx:id="txtListSongs" layoutX="272.0" layoutY="98.0" prefHeight="25.0" prefWidth="138.0" />
+            <Button fx:id="btnGoSongs" layoutX="295.0" layoutY="201.0" mnemonicParsing="false" onAction="#addSongToLIst" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #530b0e;" text="GO" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="36.0" layoutY="37.0" prefHeight="17.0" prefWidth="168.0" style="-fx-background-color: #530b0e;" text="CREATE A LIST" textFill="WHITE" />
+         </children></AnchorPane>
+      <Label layoutX="37.0" layoutY="19.0" prefHeight="32.0" prefWidth="84.0" text="2PLAY" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogIn" layoutX="641.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkLogIn" prefHeight="25.0" prefWidth="71.0" text="Log In" />
+      <TextField fx:id="txtUsername" layoutX="245.0" layoutY="23.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtPassword" layoutX="469.0" layoutY="23.0" prefHeight="25.0" prefWidth="107.0" />
+      <Label layoutX="174.0" layoutY="26.0" prefHeight="17.0" prefWidth="71.0" text="Username" textFill="WHITE" />
+      <Label layoutX="405.0" layoutY="27.0" prefHeight="17.0" prefWidth="64.0" text="Password" textFill="WHITE" />
+      <Label layoutX="137.0" layoutY="98.0" textFill="WHITE" />
+      <TextField fx:id="txtSearch" layoutX="52.0" layoutY="485.0" prefHeight="25.0" prefWidth="168.0" />
+      <Label alignment="CENTER" layoutX="95.0" layoutY="459.0" prefHeight="17.0" prefWidth="84.0" text="Song to listen" textFill="WHITE" />
+      <Button fx:id="btnPlay" layoutX="107.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#play" prefHeight="32.0" prefWidth="64.0" style="-fx-background-color: #530b0e;" text="PLAY" textFill="WHITE" />
+      <Label fx:id="lblPLaying" alignment="CENTER" layoutX="53.0" layoutY="337.0" prefHeight="17.0" prefWidth="168.0" style="-fx-background-color: #530b0e;" text="songNamePlaying...." textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="lblUsername" alignment="CENTER" layoutX="58.0" layoutY="548.0" prefHeight="17.0" prefWidth="144.0" text="Log in with user: username" textAlignment="CENTER" textFill="WHITE" />
+      <ListView fx:id="dgvLists" layoutY="86.0" prefHeight="211.0" prefWidth="175.0" />
+      <ListView fx:id="dgvSongs" layoutX="179.0" layoutY="86.0" prefHeight="211.0" prefWidth="285.0" />
+      <AnchorPane layoutX="467.0" layoutY="86.0" prefHeight="211.0" prefWidth="309.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtName" layoutX="123.0" layoutY="11.0" prefHeight="25.0" prefWidth="144.0" />
+            <Button fx:id="btnAdd" layoutX="222.0" layoutY="174.0" mnemonicParsing="false" onAction="#addSong" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #530b0e;" text="Add" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="29.0" layoutY="13.0" prefHeight="17.0" prefWidth="84.0" text="Name" textFill="#510000" />
+            <TextField fx:id="txtAuthor" layoutX="125.0" layoutY="82.0" prefHeight="25.0" prefWidth="144.0" />
+            <Label alignment="CENTER" layoutX="29.0" layoutY="83.0" prefHeight="17.0" prefWidth="84.0" text="Author" textFill="#510000" />
+            <TextField fx:id="txtDuration" layoutX="124.0" layoutY="46.0" prefHeight="25.0" prefWidth="144.0" />
+            <Label alignment="CENTER" layoutX="24.0" layoutY="45.0" prefHeight="17.0" prefWidth="84.0" text="Duration" textFill="#510000" />
+            <TextField fx:id="txtDescription" layoutX="94.0" layoutY="114.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="118.0" prefHeight="17.0" prefWidth="84.0" text="Description" textFill="#510000" />
+            <TextField fx:id="txtPath" layoutX="95.0" layoutY="144.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label alignment="CENTER" layoutX="21.0" layoutY="148.0" prefHeight="17.0" prefWidth="84.0" text="Dir path" textFill="#510000" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="58.0" layoutY="64.0" prefHeight="17.0" prefWidth="84.0" text="Lists" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="306.0" layoutY="63.0" prefHeight="17.0" prefWidth="84.0" text="Songs" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="578.0" layoutY="62.0" prefHeight="17.0" prefWidth="84.0" text="Add songs" textFill="WHITE" />
+      <Button fx:id="btnRight" layoutX="185.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#next" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #530b0e;" text="&gt;&gt;" textFill="WHITE" />
+      <Button fx:id="btnLeft" layoutX="47.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#previous" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #530b0e;" text="&lt;&lt;" textFill="WHITE" />
+   </children>
+</AnchorPane>
